@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sale Return Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 20px;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+            border-radius: 5px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .date {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 15px;
+        }
+        .date input {
+            padding: 8px;
+            width: 200px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #07396d;
+            color: white;
+        }
+
+      
+        .total,.avg-amount {
+            font-weight: bold;
+            text-align: right;
+            padding: 10px;
+        }
+        .btn-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .btn {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 15px;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        #view-btn a{
+          text-decoration: none;
+          color:white;
+        }
+        .btn-danger {
+            background-color: #dc3545;
+        }
+        .btn:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2 style="font-size: large;" >Category Wise</h2>
+    <h2 style="font-size: medium;" >Sale Return Report</h2>
+        
+
+    <!-- Date-->
+    <div class="date">
+        <div>
+            <label>From</label><br>
+            <input type="date">
+        </div>
+        <div>
+            <label>To</label><br>
+            <input type="date">
+        </div>
+    </div>
+
+    <!-- Data Table -->
+    <table>
+        <tr>
+            <th>Category Name</th>
+            <th>Sub Category</th>
+            <th>Item Name</th>
+            <th>CTN</th>
+            <th>DOZ</th>
+            <th>PCS</th>
+            <th>Amount</th>
+        </tr>
+        <tr>
+            <td>Fruit</td>
+            <td>Apple</td>
+            <td>Item One</td>
+            <td>22</td>
+            <td>11</td>
+            <td>6</td>
+            <td>400</td>
+        </tr>
+        <tr>
+            <td colspan="6" class="avg-amount">Avg Amount</td>
+            <td><b>6300</b></td>
+        </tr>
+        <tr>
+            <td colspan="3" class="total">Total</td>
+            <td><b>1100</b></td>
+            <td><b>1100</b></td>
+            <td><b>1100</b></td>
+            <td><b>1100</b></td>
+        </tr>
+    </table>
+
+    <!-- Buttons -->
+    
+    <div class="btn-container">
+        <button class="btn btn-info" id="print-btn" onclick="window.print()" >Print</button>
+      
+</div>
+</div>
+
+<script>
+
+</script>
+
+</body>
+</html>
